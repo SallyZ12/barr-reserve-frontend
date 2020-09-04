@@ -3,12 +3,15 @@ import React from 'react';
 import './App.css';
 
 function App() {
-  return(
+
+return(
 
 
-    <p> Barr Reserve</p>
+  <p> Barr Reserve </p>
 
-)
+
+
+  )
 
 }
 
