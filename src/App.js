@@ -25,7 +25,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log("MSTP-APP:", state.roomsReducer)
+  // console.log("MSTP-APP:", state.roomsReducer)
   return ({
 
     rooms: state.roomsReducer
