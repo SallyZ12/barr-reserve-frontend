@@ -11,7 +11,7 @@ class RoomsContainer extends React.Component {
         <div>
         <Switch>
 
-        <Route exact path="/clubs/:id" render={(routerProps)=> <Room {...routerProps} rooms={this.props.rooms}/>}/>
+        <Route exact path="/rooms/:id" render={(routerProps)=> <Room {...routerProps} rooms={this.props.rooms}/>}/>
 
         </Switch>
       </div>
