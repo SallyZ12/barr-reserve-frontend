@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Home from './components/Home'
 import './App.css';
 import RoomsContainer from './containers/RoomsContainer'
 import {fetchRooms} from './actions/fetchRooms'
