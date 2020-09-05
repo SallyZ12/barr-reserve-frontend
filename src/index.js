@@ -7,11 +7,11 @@ import store from './store.js'
 import { BrowserRouter as Router } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
+ReactDOM.render(<Provider store={ store }>
+    <Router>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    </Router>
+    </Provider>, document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
