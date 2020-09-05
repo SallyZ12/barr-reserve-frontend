@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import Room from './components/Room'
+import RoomsContainer from './containers/RoomsContainer'
 import {fetchRooms} from './actions/fetchRooms'
 import { connect } from 'react-redux'
 import { Route, Redirect, NavLink, Switch } from 'react-router-dom'
@@ -17,7 +17,7 @@ class App extends React.Component {
 
     return(
       <div>
-      <Room/>
+      <RoomsContainer/>
       </div>
 
     )
