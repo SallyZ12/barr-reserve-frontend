@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import Room from '../components/Room'
-
+import Rooms from '../components/Rooms'
 import { Route, Switch } from 'react-router-dom'
 
 class RoomsContainer extends React.Component {
@@ -12,7 +12,7 @@ class RoomsContainer extends React.Component {
         <Switch>
 
         <Route exact path="/rooms/:id" render={(routerProps)=> <Room {...routerProps} rooms={this.props.rooms}/>}/>
-
+        <Route exact path='/rooms' component = {Rooms} />
         </Switch>
       </div>
     )
