@@ -22,4 +22,4 @@ const Room = (props) => {
 
 
 
-export default withRouter(null, connect(Room));
+export default withRouter(connect()(Room));
