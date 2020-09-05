@@ -1,9 +1,12 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
+import roomsReducer from './reducers/roomsReducer'
 
 
+const reducer = combineReducers({
 
-const reducer = combineReducers({})
+  roomsReducer
+})
 
 
 
