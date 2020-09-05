@@ -4,17 +4,17 @@ import { NavLink, withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
 
 
-const Room = (props) => {
-
+const Room =(props, {rooms}) => {
+debugger
   console.log("props", props)
 
-  // let room = props.rooms.rooms && props.rooms.rooms.filter(room => room.id === parseInt(props.match.params.id))[0]
+  let room = props.rooms.rooms && props.rooms.rooms.filter(room => room.id === parseInt(props.match.params.id))[0]
 
 
   return (
 
     <div>
-    <h3>hello </h3>
+    <h3> HELLO FOR NOW </h3>
     </div>
   )
 
