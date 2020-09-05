@@ -1,18 +1,35 @@
 import React from 'react';
 
 import './App.css';
+import Room from './components/Room'
+import {fetchRooms} from './actions/fetchRooms'
+import { connect } from 'react-redux'
+import { Route, Redirect, NavLink, Switch } from 'react-router-dom'
 
-function App() {
+class App extends React.Component {
 
-return(
-
-
-  <p> Barr Reserve </p>
-
+  componentDidMount() {
+    this.props.fetchRooms()
+  }
 
 
-  )
+  render () {
 
+    return(
+      <div>
+      <Room/>
+      </div>
+
+    )
+  }
 }
 
-export default App;
+const mapStateToProps = state => {
+  console.log("MSTP-APP:", state.roomsReducer)
+  return ({
+
+    rooms: state.roomsReducer
+  })
+}
+
+export default connect(mapStateToProps, { fetchRooms })(App);
