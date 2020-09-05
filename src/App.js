@@ -17,6 +17,7 @@ class App extends React.Component {
 
     return(
       <div>
+      <Route exact path = '/home' render = {() => <Home home = {this.props.rooms}/>}/>
       <RoomsContainer/>
       </div>
 
