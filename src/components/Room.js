@@ -6,13 +6,15 @@ import {connect} from 'react-redux'
 
 const Room = (props) => {
 
-  let room = props.rooms.rooms && props.rooms.rooms.filter(room => room.id === parseInt(props.match.params.id))[0]
+  console.log("props", props)
+
+  // let room = props.rooms.rooms && props.rooms.rooms.filter(room => room.id === parseInt(props.match.params.id))[0]
 
 
   return (
 
     <div>
-    <h3> {room ? room.room_name : null} </h3>
+    <h3>hello  </h3>
     </div>
   )
 
@@ -23,3 +25,6 @@ const Room = (props) => {
 
 
 export default withRouter(connect()(Room));
+
+
+// {room ? room.room_name : null}
