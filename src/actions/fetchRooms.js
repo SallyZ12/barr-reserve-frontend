@@ -17,3 +17,8 @@ export function fetchRooms() {
     )
    }
 }
+
+
+
+
+  // .then(rooms => console.log(rooms))
