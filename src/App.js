@@ -5,6 +5,7 @@ import RoomsContainer from './containers/RoomsContainer'
 import {fetchRooms} from './actions/fetchRooms'
 import { connect } from 'react-redux'
 import { Route, Redirect, NavLink, Switch } from 'react-router-dom'
+import './style.css';
 
 class App extends React.Component {
 
@@ -16,14 +17,14 @@ class App extends React.Component {
   render () {
 
     return(
-      <div>
+      <div className="navmenu">
       <Switch>
 
       <Route exact path = '/home' render = {() => <Home home = {this.props.rooms}/>}/>
       <Route exact path = '/' render = {()=> <Redirect to='/home'/>}/>
 
       </Switch>
-      
+
       <RoomsContainer/>
       </div>
 
