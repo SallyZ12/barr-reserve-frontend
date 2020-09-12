@@ -20,10 +20,10 @@ class App extends React.Component {
     return(
       <div className="navmenu">
 
-      <Button variant="light"><NavLink exactclassname="current" to="/home">Home</NavLink></Button>
+      <Button variant="outline-primary"><NavLink exactclassname="current" to="/home">Home</NavLink></Button>
       <br/><br/>
-      <Button variant="light"><NavLink exactclassname="current" to="/signup">Register</NavLink></Button>
-      <Button variant="light"><NavLink exactclassname="current" to="/login">Login</NavLink></Button>
+      <Button variant="outline-primary"><NavLink exactclassname="current" to="/signup">Register</NavLink></Button>
+      <Button variant="outline-primary"><NavLink exactclassname="current" to="/login">Login</NavLink></Button>
       <Switch>
 
       <Route exact path = '/home' render = {() => <Home home = {this.props.rooms}/>}/>
