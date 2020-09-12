@@ -22,8 +22,8 @@ class App extends React.Component {
 
       <Button variant="light"><NavLink exactclassname="current" to="/home">Home</NavLink></Button>
       <br/><br/>
-      <button><NavLink exactclassname="current" to="/signup">Register</NavLink></button>
-      <button><NavLink exactclassname="current" to="/login">Login</NavLink></button>
+      <Button variant="light"><NavLink exactclassname="current" to="/signup">Register</NavLink></Button>
+      <Button variant="light"><NavLink exactclassname="current" to="/login">Login</NavLink></Button>
       <Switch>
 
       <Route exact path = '/home' render = {() => <Home home = {this.props.rooms}/>}/>
