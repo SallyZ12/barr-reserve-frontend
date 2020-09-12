@@ -5,7 +5,7 @@ import RoomsContainer from './containers/RoomsContainer'
 import {fetchRooms} from './actions/fetchRooms'
 import { connect } from 'react-redux'
 import { Route, Redirect, NavLink, Switch } from 'react-router-dom'
-import Button from 'react-boostrap/Button'
+import Button from 'react-bootstrap/Button'
 import './style.css';
 
 class App extends React.Component {
