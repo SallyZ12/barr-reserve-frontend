@@ -22,10 +22,8 @@ class App extends React.Component {
 
       <Button variant="outline-primary"><NavLink exactclassname="current" to="/home">Home</NavLink></Button>
       <br/><br/>
-      <Button variant="outline-primary"><NavLink exactclassname="current" to="/signup">Register</NavLink></Button>
-      <Button variant="outline-primary"><NavLink exactclassname="current" to="/login">Login</NavLink></Button>
-      <Switch>
 
+      <Switch>
       <Route exact path = '/home' render = {() => <Home home = {this.props.rooms}/>}/>
       <Route exact path = '/' render = {()=> <Redirect to='/home'/>}/>
 
@@ -47,3 +45,7 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, { fetchRooms })(App);
+
+
+/*<Button variant="outline-primary"><NavLink exactclassname="current" to="/signup">Register</NavLink></Button>*/
+/*<Button variant="outline-primary"><NavLink exactclassname="current" to="/login">Login</NavLink></Button>*/
