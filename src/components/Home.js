@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Redirect, NavLink, Switch } from 'react-router-dom'
+import { NavLink }  from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import Rooms from '../components/Rooms'
 
