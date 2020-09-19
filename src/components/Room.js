@@ -15,6 +15,7 @@ const Room =(props, {rooms}) => {
 
     <div>
     <h3> {room.room_name} </h3>
+    <p> I'm here </p>
     </div>
   )
 
