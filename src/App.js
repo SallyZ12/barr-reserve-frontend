@@ -41,14 +41,14 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => {
-  // console.log("MSTP-APP:", state.roomsReducer)
+  console.log("MSTP-APP Users:", state.usersReducer)
   return ({
-
+    users: state.usersReducer,
     rooms: state.roomsReducer
   })
 }
 
-export default connect(mapStateToProps, { fetchRooms })(App);
+export default connect(mapStateToProps, { fetchUsers,fetchRooms })(App);
 
 
 /*<Button variant="outline-primary"><NavLink exactclassname="current" to="/signup">Register</NavLink></Button>*/
