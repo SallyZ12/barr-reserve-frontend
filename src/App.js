@@ -2,7 +2,9 @@ import React from 'react';
 import Home from './components/Home'
 import './App.css';
 import RoomsContainer from './containers/RoomsContainer'
+import UsersContainer from './containers/UsersContainer'
 import {fetchRooms} from './actions/fetchRooms'
+import {fetchUsers} from './actions/fetchUsers'
 import { connect } from 'react-redux'
 import { Route, Redirect, NavLink, Switch } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
@@ -12,6 +14,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.props.fetchRooms()
+    this.props.fetchUsers()
   }
 
 
@@ -30,6 +33,7 @@ class App extends React.Component {
       </Switch>
 
       <RoomsContainer/>
+      <UsersContainer/>
       </div>
 
     )
