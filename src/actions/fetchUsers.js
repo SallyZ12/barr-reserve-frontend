@@ -1,5 +1,5 @@
 export const displayUsers = users => {
-  // console.log("display:", users)
+  console.log("action display:", users)
   return {
     type: "DISPLAY_USERS",
     users
