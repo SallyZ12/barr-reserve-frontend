@@ -43,8 +43,8 @@ class App extends React.Component {
 const mapStateToProps = state => {
   console.log("MSTP-APP Users:", state.usersReducer)
   return ({
-    users: state.usersReducer,
-    rooms: state.roomsReducer
+    rooms: state.roomsReducer,
+    users: state.usersReducer
   })
 }
 
