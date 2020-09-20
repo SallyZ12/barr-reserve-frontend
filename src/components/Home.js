@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink }  from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import Rooms from '../components/Rooms'
+import Users from '../components/Users'
 
 
 
@@ -18,6 +19,7 @@ const Home = (props) => {
         <h4 className = "text-center"> Select a Room </h4>
         <br/>
       <Rooms rooms = {props.home.rooms}/>
+      {/*<Users users = {props.home.users}/>*/}
       <br/>
 
 
