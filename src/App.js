@@ -27,7 +27,7 @@ class App extends React.Component {
       <br/><br/>
 
       <Switch>
-      <Route exact path = '/home' render = {() => <Home home = {this.props.rooms}/>}/>
+      <Route exact path = '/home' render = {() => <Home home = {this.props.rooms}  />}/>
       <Route exact path = '/' render = {()=> <Redirect to='/home'/>}/>
 
       </Switch>
