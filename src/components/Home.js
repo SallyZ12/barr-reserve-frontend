@@ -19,7 +19,7 @@ const Home = (props) => {
         <h4 className = "text-center"> Select a Room </h4>
         <br/>
       <Rooms rooms = {props.home.rooms}/>
-      {/*<Users users = {props.home.users}/>*/}
+      <Users users = {props.users}/>
       <br/>
 
 
