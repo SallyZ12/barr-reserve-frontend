@@ -4,6 +4,7 @@ import roomsReducer from './reducers/roomsReducer'
 import usersReducer from './reducers/usersReducer'
 import currentUserReducer from './reducers/currentUserReducer'
 import signupFormReducer from './reducers/signupFormReducer'
+import loginFormReducer from './reducers/loginFormReducer'
 
 
 const reducer = combineReducers({
@@ -11,7 +12,8 @@ const reducer = combineReducers({
   usersReducer,
   roomsReducer,
   currentUserReducer,
-  signupFormReducer
+  signupFormReducer,
+  loginFormReducer
 })
 
 
