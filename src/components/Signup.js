@@ -50,13 +50,14 @@ const Signup = ({ signupFormData, updateSignupForm, history, handleSubmit, editM
               value={email}
               name="email"
               onChange={handleUserInfoInputChange} />
-              <br/>
+              <br/><br/>
+
       <select value={apartment}
               onChange={handleUserInfoInputChange}
-              name="apartment">
+              name="">
               <Options options = {apt}/>
               </select>
-              <br/>
+              <br/><br/>
       <input  type="text"
               placeholder="enter PW >= 8 chars"
               value={password}
