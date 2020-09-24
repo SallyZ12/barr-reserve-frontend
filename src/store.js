@@ -7,7 +7,8 @@ import usersReducer from './reducers/usersReducer'
 const reducer = combineReducers({
 
   usersReducer,
-  roomsReducer
+  roomsReducer,
+  currentUserReducer
 })
 
 
