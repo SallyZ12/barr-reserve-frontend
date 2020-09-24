@@ -3,6 +3,7 @@ import Home from './components/Home'
 import './App.css';
 import RoomsContainer from './containers/RoomsContainer'
 import UsersContainer from './containers/UsersContainer'
+import NavBar from './components/NavBar'
 import {fetchRooms} from './actions/fetchRooms'
 import {fetchUsers} from './actions/fetchUsers'
 import { connect } from 'react-redux'
@@ -25,7 +26,8 @@ class App extends React.Component {
 
       <Button variant="outline-primary"><NavLink exactclassname="current" to="/home">Home</NavLink></Button>
       <br/><br/>
-
+      <NavBar />
+      <br/>
       <Switch>
       <Route exact path = '/home' render = {() => <Home home = {this.props.rooms} />}/>
       <Route exact path = '/' render = {()=> <Redirect to='/home'/>}/>
