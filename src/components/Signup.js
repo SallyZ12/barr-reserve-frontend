@@ -1,7 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {updateSignupForm} from "../actions/signupForm"
-
+import Options from './components/Options'
+import {apt} from '../data'
 
 const Signup = ({ signupFormData, updateSignupForm, history, handleSubmit, editMode }) => {
 
