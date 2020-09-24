@@ -3,7 +3,7 @@ const initialState = {
   last_name: "",
   username: "",
   email: "",
-  apartment,
+  apartment: "",
   password: "",
   admin: "No"
 }
