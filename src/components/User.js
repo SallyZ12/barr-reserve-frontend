@@ -27,7 +27,7 @@ function sortByDate(data) {
 }
 
 let user1 = user ? user.username: null
-let currentUser1 = props.currentUser.username
+// let currentUser1 = props.currentUser.username
 
 
   return (
@@ -37,7 +37,7 @@ let currentUser1 = props.currentUser.username
         <Card.Title> Today's Date: {currentDate} <br/><br/> Player Information:</Card.Title>
 
         {/*only player logged in can edit their own player information*/}
-        { user1 === currentUser1 ? <Link to={`/users/${user.id}/edit`}> Edit Player Information </Link> : ""}
+      {/*  { user1 === currentUser1 ? <Link to={`/users/${user.id}/edit`}> Edit Player Information </Link> : ""}*/}
 
         <Card.Text>
          <br/>
@@ -50,7 +50,7 @@ let currentUser1 = props.currentUser.username
 
             {/* ternary used so that admin can't access players specific reservation from player's main reservation screen*/}
 
-            {user1 === currentUser1 ?
+          {/*  {user1 === currentUser1 ?
 
               user && sortByDate(user.reservations).map(reservation => ( <li key={reservation.id}>
                <Link to={`/reservations/${reservation.id}`} >
@@ -66,7 +66,7 @@ let currentUser1 = props.currentUser.username
               {reservation.hour} --
               {reservation.reservation_club}
               </li> ))
-            }
+            }*/}
 
         </Card.Text>
       </Card.Body>
