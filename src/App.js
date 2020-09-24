@@ -1,5 +1,6 @@
 import React from 'react';
 import Home from './components/Home'
+import Login from './components/Login'
 import './App.css';
 import RoomsContainer from './containers/RoomsContainer'
 import UsersContainer from './containers/UsersContainer'
@@ -31,6 +32,7 @@ class App extends React.Component {
       <Switch>
       <Route exact path = '/home' render = {() => <Home home = {this.props.rooms} />}/>
       <Route exact path = '/' render = {()=> <Redirect to='/home'/>}/>
+      <Route exact path="/login" component = {Login} />
 
       </Switch>
 
