@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {fetchUsers} from '../actions/fetchUsers'
 import Users from '../components/Users'
 import User from '../components/User'
-// import NewSignupFormWrapper from '../components/NewSignupFormWrapper'
+import NewSignupFormWrapper from '../components/NewSignupFormWrapper'
 // import EditSignupFormWrapper from '../components/EditSignupFormWrapper'
 import { Route } from 'react-router-dom'
 
@@ -18,9 +18,8 @@ class UsersContainer extends React.Component {
       <div>
 
       <Route exact path="/users" render={(routerProps) => <Users {...routerProps} users={this.props.users}/>}/>
-
       <Route exact path="/users/:id" render={(rProps)=> <User {...rProps} currentUser={this.props.currentUser} users={this.props.users} rooms={this.props.rooms}/>}/>
-
+      <Route exact path="/signup" component = {NewSignupFormWrapper} />
 
       </div>
 
