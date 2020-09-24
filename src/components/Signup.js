@@ -7,7 +7,7 @@ import {apt} from '../data'
 const Signup = ({ signupFormData, updateSignupForm, history, handleSubmit, editMode }) => {
 
 // when const signupFormData in the value only need to use the name rather than signupFormData.first_name, etc.
-  const { first_name, last_name, username, email, password, admin} = signupFormData
+  const { first_name, last_name, username, email, apartment, password, admin} = signupFormData
 
 
   const handleUserInfoInputChange = event => {
@@ -54,8 +54,7 @@ const Signup = ({ signupFormData, updateSignupForm, history, handleSubmit, editM
       <select value={apartment}
               onChange={handleUserInfoInputChange}
               name="apartment">
-              <option value="PHB">No</option>
-              <option value="5D">Yes</option>
+              <Options options = {apt}/>
               </select>
 
       <input  type="text"
