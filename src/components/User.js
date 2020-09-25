@@ -42,8 +42,9 @@ let user1 = user ? user.username: null
         <Card.Text>
          <br/>
         Name: {user ? user.first_name : null} {user ? user.last_name : null} <br/>
-        username: {user ? user.username : null} <br/>
-        email: {user ? user.email : null} <br/>
+        Username: {user ? user.username : null} <br/>
+        Email: {user ? user.email : null} <br/>
+        Apartment: {user ? user.apartment : null} <br/>
         Admin: {user ? user.admin : null} <br/>
         Reservation Count: {user ? user.reservations.length : null}<br/><br/>
         Reservations: <br/>
