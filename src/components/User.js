@@ -37,7 +37,7 @@ let user1 = user ? user.username: null
         <Card.Title> Today's Date: {currentDate} <br/><br/> Player Information:</Card.Title>
 
         {/*only player logged in can edit their own player information*/}
-      {/*  { user1 === currentUser1 ? <Link to={`/users/${user.id}/edit`}> Edit Player Information </Link> : ""}*/}
+      {/*{ user1 === currentUser1 ? <Link to={`/users/${user.id}/edit`}> Edit Owner Information </Link> : ""}*/}
 
         <Card.Text>
          <br/>
