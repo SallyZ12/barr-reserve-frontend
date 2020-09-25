@@ -54,7 +54,7 @@ const Signup = ({ signupFormData, updateSignupForm, history, handleSubmit, editM
 
       <select value={apartment}
               onChange={handleUserInfoInputChange}
-              name="">
+              name="apartment">
               <Options options = {apt}/>
               </select>
               <br/><br/>
