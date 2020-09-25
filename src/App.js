@@ -26,8 +26,8 @@ class App extends React.Component {
       <div className="navmenu">
 
       <Button variant="outline-primary"><NavLink exactclassname="current" to="/home">Home</NavLink></Button>
-      <br/><br/>
-      <NavBar />
+      <br/>
+      <NavBar/>
       <br/>
       <Switch>
       <Route exact path = '/home' render = {() => <Home home = {this.props.rooms} />}/>
