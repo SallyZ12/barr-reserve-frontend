@@ -21,7 +21,7 @@ class RoomsContainer extends React.Component {
 
 
 const mapStateToProps = state => {
-  console.log("RoomsContainer state:", state.roomsReducer)
+  // console.log("RoomsContainer state:", state.roomsReducer)
   return {
     rooms: state.roomsReducer,
 
