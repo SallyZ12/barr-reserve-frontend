@@ -5,7 +5,7 @@ import Logout from '../components/Logout'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 
-const NavBar =  ({ currentUser}) => {
+const NavBar =  ({ currentUser }) => {
 
 let admin1 = currentUser && currentUser.admin === "Yes"
 
