@@ -26,6 +26,7 @@ class App extends React.Component {
       <div className="navmenu">
 
       <Button variant="outline-primary"><NavLink exactclassname="current" to="/home">Home</NavLink></Button>
+
       <br/>
       <NavBar/>
       <br/>
@@ -45,7 +46,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log("MSTP-APP Users:", state.usersReducer)
+  // console.log("MSTP-APP Users:", state.usersReducer)
   return ({
     rooms: state.roomsReducer,
     users: state.usersReducer
