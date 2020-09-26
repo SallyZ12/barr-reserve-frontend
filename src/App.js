@@ -5,8 +5,9 @@ import './App.css';
 import RoomsContainer from './containers/RoomsContainer'
 import UsersContainer from './containers/UsersContainer'
 import NavBar from './components/NavBar'
-import {fetchRooms} from './actions/fetchRooms'
-import {fetchUsers} from './actions/fetchUsers'
+import { fetchRooms } from './actions/fetchRooms'
+import { fetchUsers } from './actions/fetchUsers'
+import { getCurrentUser } from './actions/currentUser'
 import { connect } from 'react-redux'
 import { Route, Redirect, NavLink, Switch } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
@@ -15,6 +16,7 @@ import './style.css';
 class App extends React.Component {
 
   componentDidMount() {
+    this.props.getCurrentUser()
     this.props.fetchRooms()
     this.props.fetchUsers()
   }
@@ -46,14 +48,16 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => {
-  // console.log("MSTP-APP Users:", state.usersReducer)
+  console.log("MSTP-APP Users:", state.currentUserReducer)
   return ({
+    loggedIn: !!state.currentUserReducer,
+    currentUser: state.currentUserReducer,
     rooms: state.roomsReducer,
     users: state.usersReducer
   })
 }
 
-export default connect(mapStateToProps, { fetchUsers, fetchRooms })(App);
+export default connect(mapStateToProps, { fetchUsers, fetchRooms, getCurrentUser })(App);
 
 
 /*<Button variant="outline-primary"><NavLink exactclassname="current" to="/signup">Register</NavLink></Button>*/
