@@ -27,7 +27,7 @@ function sortByDate(data) {
 }
 
 let user1 = user ? user.username: null
-// let currentUser1 = props.currentUser.username
+let currentUser1 = props.currentUser.username
 
 
   return (
