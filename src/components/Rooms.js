@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 
 const Rooms = ({rooms}) => {
-console.log("rooms", rooms)
+// console.log("rooms", rooms)
 
 return (
 
