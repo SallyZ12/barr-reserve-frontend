@@ -32,6 +32,7 @@ const mapStateToProps = state => {
   return {
     users: state.usersReducer,
     rooms: state.roomsReducer,
+    currentUser: state.currentUserReducer
 
   }
 }
@@ -42,4 +43,3 @@ export default connect(mapStateToProps, {fetchUsers})(UsersContainer)
 
   // <Route exact path="/signup" component = {NewSignupFormWrapper} />
   //   <Route exact path="/users/:id/edit" render={(rProps)=> <EditSignupFormWrapper {...rProps} currentUser={this.props.currentUser} />}/>
-  // currentUser: state.currentUserReducer
