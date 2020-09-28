@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import {Link, Switch} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Logout from '../components/Logout'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
@@ -19,7 +19,7 @@ let admin1 = currentUser && currentUser.admin === "Yes"
        <Dropdown.Item href = {currentUser && admin1 ? "/rooms": null}>New Room </Dropdown.Item>
        <Dropdown.Item href = {currentUser && admin1 ? "/users": null}>Owners </Dropdown.Item>
        </DropdownButton> : ""}
-    
+
     </div>
   )
 }
