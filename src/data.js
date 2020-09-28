@@ -103,4 +103,5 @@ export const apt = [{id: 0, value: 'Unit', label: 'Apt'},
              {id: 100, value:'PHE',label:'PHE'},
              {id: 101, value:'PHF',label:'PHF'},
              {id: 102, value:'PHG',label:'PHG'},
-             {id: 103, value:'PHH',label:'PHH'}]
+             {id: 103, value:'PHH',label:'PHH'},
+             {id: 104, value:'ADMIN',label:'ADMIN'}]
