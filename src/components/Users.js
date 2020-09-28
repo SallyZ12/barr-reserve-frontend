@@ -26,4 +26,4 @@ return (
     </div>
   )
 }
-export default Users
+export default Users;
