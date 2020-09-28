@@ -16,8 +16,10 @@ console.log("NavBar- admin1", admin1)
        {Object.keys(currentUser).length !== 0 ? <p> <Link exact='true' to={`/users/${currentUser.id}`}>Reservations</Link></p> :""  }
 
        {Object.keys(currentUser).length !== 0 && admin1 ? <DropdownButton id="dropdown-basic-button" title="Admin">
-       <Dropdown.Item href = {currentUser && admin1 ? "/rooms": null}>New Room </Dropdown.Item>
-       <Dropdown.Item href = {currentUser && admin1 ? "/users": null}>Owners </Dropdown.Item>
+       {/*<Dropdown.Item href = {currentUser && admin1 ? "/rooms": null}>New Room </Dropdown.Item>*/}
+       {/*<Dropdown.Item href = {currentUser && admin1 ? "/users": null}>Owners </Dropdown.Item>*/}
+       <Link exact='true' to={"/rooms"}>New Room </Link><br/>
+       <Link exact='true' to={"/users"}>Owners </Link>
        </DropdownButton> : ""}
 
     </div>
