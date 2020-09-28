@@ -8,7 +8,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 const NavBar =  ({ currentUser }) => {
 
 let admin1 = currentUser && currentUser.admin === "Yes"
-
+console.log("NavBar- admin1", admin1)
   return (
     <div className="NavBar">
        {Object.keys(currentUser).length !== 0 ? <Logout/> : ""}
@@ -25,7 +25,7 @@ let admin1 = currentUser && currentUser.admin === "Yes"
 }
 
 const mapStateToProps = (state) => {
-  console.log("MSTP-APP NavBar:", state.currentUserReducer)
+  // console.log("MSTP-APP NavBar:", state.currentUserReducer)
   return {
     currentUser: state.currentUserReducer
   }
