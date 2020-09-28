@@ -25,6 +25,7 @@ let admin1 = currentUser && currentUser.admin === "Yes"
 }
 
 const mapStateToProps = (state) => {
+  console.log("MSTP-APP NavBar:", state.currentUserReducer)
   return {
     currentUser: state.currentUserReducer
   }
