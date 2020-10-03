@@ -77,7 +77,7 @@ const Signup = ({ signupFormData, updateSignupForm, history, handleSubmit, editM
               </label>
           <br/>
           <br/>
-      <input type="submit" value={editMode ? "Update Owner Info -- You Must Enter Password": "Register"}/>
+      <input type="submit" value={editMode ? "Update Owner Info - Must Enter Password" : "Register"}/>
     </form>
 )}
 
