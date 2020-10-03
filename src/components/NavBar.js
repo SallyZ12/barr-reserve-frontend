@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import {Link} from 'react-router-dom'
 import Logout from '../components/Logout'
 import DropdownButton from 'react-bootstrap/DropdownButton'
-import Dropdown from 'react-bootstrap/Dropdown'
+// import Dropdown from 'react-bootstrap/Dropdown'
 
 const NavBar =  ({ currentUser }) => {
 
