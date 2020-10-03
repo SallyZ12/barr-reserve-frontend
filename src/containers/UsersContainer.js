@@ -4,7 +4,7 @@ import {fetchUsers} from '../actions/fetchUsers'
 import Users from '../components/Users'
 import User from '../components/User'
 import NewSignupFormWrapper from '../components/NewSignupFormWrapper'
-// import EditSignupFormWrapper from '../components/EditSignupFormWrapper'
+import EditSignupFormWrapper from '../components/EditSignupFormWrapper'
 import { Route } from 'react-router-dom'
 
 class UsersContainer extends React.Component {
@@ -20,6 +20,7 @@ class UsersContainer extends React.Component {
       <Route exact path="/users" render={(routerProps) => <Users {...routerProps} users={this.props.users}/>}/>
       <Route exact path="/users/:id" render={(rProps)=> <User {...rProps} currentUser={this.props.currentUser} users={this.props.users} rooms={this.props.rooms}/>}/>
       <Route exact path="/signup" component = {NewSignupFormWrapper} />
+      <Route exact path="/users/:id/edit" render={(rProps)=> <EditSignupFormWrapper {...rProps} currentUser={this.props.currentUser} />}/>
 
       </div>
 
@@ -41,5 +42,5 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps, {fetchUsers})(UsersContainer)
 
 
-  
+
   //   <Route exact path="/users/:id/edit" render={(rProps)=> <EditSignupFormWrapper {...rProps} currentUser={this.props.currentUser} />}/>
