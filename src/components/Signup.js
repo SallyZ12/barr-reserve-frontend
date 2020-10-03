@@ -58,6 +58,7 @@ const Signup = ({ signupFormData, updateSignupForm, history, handleSubmit, editM
               <Options options = {apt}/>
               </select>
               <br/><br/>
+
       <input  type="text"
               placeholder="enter PW >= 8 chars"
               value={password}
@@ -76,7 +77,7 @@ const Signup = ({ signupFormData, updateSignupForm, history, handleSubmit, editM
               </label>
           <br/>
           <br/>
-      <input type="submit" value={editMode ? "Update Owner Info" : "Register"}/>
+      <input type="submit" value={editMode ? "Update Owner Info -- You Must Enter Password": "Register"}/>
     </form>
 )}
 
