@@ -8,7 +8,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 const NavBar =  ({ currentUser }) => {
 
 let admin1 = currentUser && currentUser.admin === "Yes"
-console.log("NavBar- admin1", admin1)
+// console.log("NavBar- admin1", admin1)
   return (
     <div className="NavBar">
        {Object.keys(currentUser).length !== 0 ? <Logout/> : ""}
