@@ -13,9 +13,8 @@ class RoomsContainer extends React.Component {
         <Switch>
 
         <Route exact path="/rooms/:id" render={(routerProps)=> <Room {...routerProps} rooms={this.props.rooms}/>}/>
-        <Route exact path='/rooms' component = {Rooms} />
         <Route exact path='/rooms' component = {NewRoomFormWrapper} />
-
+        <Route exact path='/rooms' component = {Rooms} />
         </Switch>
       </div>
     )
