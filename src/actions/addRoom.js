@@ -2,7 +2,7 @@ import {resetRoomForm} from "../actions/editRoom"
 
 
 //asynchronous action creators
-export const addRoom = (clubRoom, history) => {
+export const addRoom = (roomData, history) => {
 
   return (dispatch) => {
 
@@ -50,7 +50,7 @@ export const editRoom = (room, history) => {
     })
       .then(response => response.json())
       .then(room => {
-        if (club.error) {
+        if (room.error) {
          alert(room.error)
        } else {
        dispatch({type: "EDIT_Room", room: room})
