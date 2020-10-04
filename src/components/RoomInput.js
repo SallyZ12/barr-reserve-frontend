@@ -41,7 +41,7 @@ const RoomInput = ({ roomFormData, updateRoomForm, history, editMode, handleSubm
   const mapStateToProps = state => {
 
     return {
-      roomFormData: state.clubFormReducer
+      roomFormData: state.roomFormReducer
     }
   }
 
