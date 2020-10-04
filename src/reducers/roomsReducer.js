@@ -7,6 +7,9 @@ export default function roomsReducer(state = initialState, action) {
     case 'DISPLAY_ROOMS':
      return {rooms: action.rooms}
 
+     case 'ADD_ROOM':
+       return {...state, rooms: [...state.rooms, action.payload]} 
+
      default:
       return state
   }
