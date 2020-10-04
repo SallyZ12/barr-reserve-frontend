@@ -48,8 +48,8 @@ class App extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log("MSTP-APP loggedIn:",!!state.currentUserReducer)
-  console.log("MSTP-APP currentUser:", state.currentUserReducer)
+  // console.log("MSTP-APP loggedIn:",!!state.currentUserReducer)
+  // console.log("MSTP-APP currentUser:", state.currentUserReducer)
   return ({
     loggedIn: !!state.currentUserReducer,
     currentUser: state.currentUserReducer,
