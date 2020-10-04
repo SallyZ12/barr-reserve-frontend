@@ -13,7 +13,7 @@ export default function roomsReducer(state = initialState, action) {
      case 'DELETE_ROOM':
       return {...state, rooms: state.rooms.filter(room=> room.id !== action.payload.id)}
 
-      case "EDIT_CLUB":
+      case "EDIT_ROOM":
         return {rooms: state.rooms.map(room => room.id === action.room.id ? action.room: room)}
 
      default:
