@@ -30,8 +30,8 @@ const RoomInput = ({ roomFormData, updateRoomForm, history, editMode, handleSubm
         <label> Room Name </label>
         <input type='text'
                 placeholder='Name'
-                value={clubName}
-                name = 'clubName'
+                value={roomName}
+                name = 'roomName'
                 onChange={handleClubInfoInputChange}/><br/>
 
         <input type = "submit" value={editMode ? "Update Room Info" : "New Room" }/>
