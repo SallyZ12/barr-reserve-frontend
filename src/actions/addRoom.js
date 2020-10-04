@@ -1,6 +1,5 @@
 import {resetRoomForm} from "../actions/editRoom"
 
-
 //asynchronous action creators
 export const addRoom = (roomData, history) => {
 
@@ -22,7 +21,7 @@ export const addRoom = (roomData, history) => {
         if(room.error) {
           alert(room.error)
       } else {
-        dispatch({type: 'ADD_Room', payload: room})
+        dispatch({type: 'ADD_ROOM', payload: room})
         dispatch(resetRoomForm())
         history.push('/')
 
@@ -53,7 +52,7 @@ export const editRoom = (room, history) => {
         if (room.error) {
          alert(room.error)
        } else {
-       dispatch({type: "EDIT_Room", room: room})
+       dispatch({type: "EDIT_ROOM", room: room})
        history.push(`/rooms/${room.id}`)
      }
    })
