@@ -8,7 +8,10 @@ export default function roomsReducer(state = initialState, action) {
      return {rooms: action.rooms}
 
      case 'ADD_ROOM':
-       return {...state, rooms: [...state.rooms, action.payload]} 
+       return {...state, rooms: [...state.rooms, action.payload]}
+
+       case 'DELETE_ROOM':
+      return {...state, rooms: state.rooms.filter(room=> room.id !== action.payload.id)}
 
      default:
       return state
