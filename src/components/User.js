@@ -1,11 +1,14 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import moment from 'moment'
+import Button from 'react-bootstrap/Button';
+import {deleteUser} from '../actions/deleteUser'
+import {connect} from 'react-redux'
 
 
 const User = (props) => {
-// console.log("User props", props)
+
 // let user = props.users.users[props.match.params.id-1](this returns object by index of aray)
 
 // Use following instead, need id not index of array since sort order changes the order
@@ -28,7 +31,12 @@ function sortByDate(data) {
 
 let user1 = user ? user.username: null
 let currentUser1 = props.currentUser.username
+let admin1 = props.currentUser && props.currentUser.admin === "Yes"
 
+const handleDeleteUser = (user) => {
+  props.deleteUser(user.id)
+  props.history.push("/")
+}
 
   return (
     <Card bg="light"  className="text-left" style={{ width: '45rem'}}>
@@ -38,6 +46,7 @@ let currentUser1 = props.currentUser.username
 
         {/*only player logged in can edit their own player information*/}
         { user1 === currentUser1 ? <Link to={`/users/${user.id}/edit`}> Edit Owner Information </Link> : ""}
+        { admin1 ? <Button variant="link" onClick={()=> handleDeleteUser(user)}> Delete Owner</Button> : ""}
 
         <Card.Text>
          <br/>
@@ -75,4 +84,4 @@ let currentUser1 = props.currentUser.username
   )
 }
 
-export default User;
+export default withRouter(connect(null, {deleteUser})(User));
