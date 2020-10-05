@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Room from '../components/Room'
 import Rooms from '../components/Rooms'
 import NewRoomFormWrapper from '../components/NewRoomFormWrapper'
+import EditRoomFormWrapper from '../components/EditRoomFormWrapper'
 import { Route, Switch } from 'react-router-dom'
 
 class RoomsContainer extends React.Component {
@@ -14,6 +15,7 @@ class RoomsContainer extends React.Component {
 
         <Route exact path="/rooms/:id" render={(routerProps)=> <Room {...routerProps} rooms={this.props.rooms}/>}/>
         <Route exact path='/rooms' component = {NewRoomFormWrapper} />
+        <Route exact path="/rooms/:id/edit" render={(rProps)=> <EditRoomFormWrapper {...rProps} rooms={this.props.rooms}/>}/>
         <Route exact path='/rooms' component = {Rooms} />
         </Switch>
       </div>
