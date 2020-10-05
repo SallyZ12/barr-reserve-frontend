@@ -26,6 +26,9 @@ export default function usersReducer(state = initialState, action) {
       case 'EDIT_USER':
         return {users: state.users.map(user => user.id === action.user.id ? action.user : user)}
 
+      case 'DELETE_USER':
+        return {...state, users: state.users.filter(user=> user.id !== action.payload.id)}
+
 
     default:
       return state
