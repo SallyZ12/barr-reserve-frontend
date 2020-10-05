@@ -22,7 +22,7 @@ const Room =(props, {rooms}) => {
 
     <div>
     <h3> {room ? room.room_name : null} </h3>
-    <p> I'm here </p>
+    <p> Reservations go here!</p>
 
     {admin1 ? <Button variant="link" onClick={()=> handleDeleteRoom(room)}> Delete Room</Button> : ""}
     <br/>
