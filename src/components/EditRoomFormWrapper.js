@@ -9,7 +9,7 @@ class EditRoomFormWrapper extends React.Component {
 
 
   componentDidMount() {
-    this.props.rooms.roomss && this.props.setRoomFormDataForEdit(this.props.rooms.rooms.filter(room => room.id === parseInt(this.props.match.params.id))[0])
+    this.props.rooms.rooms && this.props.setRoomFormDataForEdit(this.props.rooms.rooms.filter(room => room.id === parseInt(this.props.match.params.id))[0])
 
   }
 
