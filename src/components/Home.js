@@ -12,8 +12,8 @@ const Home = (props) => {
       <div className = "Home">
 
         <h6 className = "text-center"> Signup/Login To Begin </h6>
-      <Button variant="outline-primary"><NavLink exactclassname="current" to="/signup">Signup</NavLink></Button>
-      <Button variant="outline-primary"><NavLink exactclassname="current" to="/login">Login</NavLink></Button>
+      {/*<Button variant="outline-primary"><NavLink exactclassname="current" to="/signup">Signup</NavLink></Button>*/}
+      {/*<Button variant="outline-primary"><NavLink exactclassname="current" to="/login">Login</NavLink></Button>*/}
       <br/><br/>
         <h4 className = "text-center"> Welcome to The Barrton Reservation System </h4>
         <h4 className = "text-center"> Select a Room </h4>
