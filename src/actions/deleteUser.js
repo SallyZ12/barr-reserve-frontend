@@ -7,7 +7,7 @@ export const deleteUser = (userId) => {
     .then(response => response.json())
     .then(user => {
       if (user.error){
-        alert(room.error)
+        alert(user.error)
       } else {
       (dispatch({type: 'DELETE_USER', payload: user}))
   }
