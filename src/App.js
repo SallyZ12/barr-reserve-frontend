@@ -28,7 +28,8 @@ class App extends React.Component {
       <div className="navmenu">
 
       <Button variant="outline-primary"><NavLink exactclassname="current" to="/home">Home</NavLink></Button>
-
+      <Button variant="outline-primary"><NavLink exactclassname="current" to="/signup">Signup</NavLink></Button>
+      <Button variant="outline-primary"><NavLink exactclassname="current" to="/login">Login</NavLink></Button>
       <br/>
       <NavBar/>
       <br/>
