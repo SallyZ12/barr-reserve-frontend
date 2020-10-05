@@ -25,6 +25,8 @@ const Room =(props, {rooms}) => {
     <p> I'm here </p>
 
     {admin1 ? <Button variant="link" onClick={()=> handleDeleteRoom(room)}> Delete Room</Button> : ""}
+    <br/>
+    {admin1 ? <NavLink to= {`/rooms/${room.id}/edit`}> Edit Room Name </NavLink> : ""}
     </div>
   )
 
