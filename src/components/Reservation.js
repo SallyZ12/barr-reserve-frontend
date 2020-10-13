@@ -27,9 +27,9 @@ const handleDeleteReservation = (reservation) => {
 
 return (
   <div>
-  Player: {props.currentUser ? props.currentUser.first_name : null} {props.currentUser ? props.currentUser.last_name : null}<br/>
+  Owner: {props.currentUser ? props.currentUser.first_name : null} {props.currentUser ? props.currentUser.apartment : null}<br/>
   <br/>
-  Room: {reservation ? reservation.reservation_club : null}<br/>
+  Room: {reservation ? reservation.reservation_room : null}<br/>
   ConfirmID: {reservation ? reservation.confirmID : null} <br/>
   Date: {reservation ? moment(reservation.date).format('MMM DD YYYY') : null} <br/>
   Time: {reservation ?  reservation.hour : null} <br/>
