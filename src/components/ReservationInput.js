@@ -39,7 +39,7 @@ constructor() {
 
   handleSubmit = (event)=> {
     event.preventDefault()
-    let roomId = this.props.room_id
+    let roomId = this.props.room.id
     let userId = this.props.currentUser && this.props.currentUser.id
     let randomId = Math.floor(Math.random() * 1000000)
 
@@ -57,7 +57,7 @@ constructor() {
   render() {
 
     // The following modifies dropdown to exclude hours by day previously reserved
-    let room = this.props.room
+    // let room = this.props.room
 
     // reservation objects reserved by day of dropdown (the value = this.state.date)
     // let day_room = room.room_res.filter(reservation => moment(reservation.date).format('MMM DD YYYY') === this.state.date)

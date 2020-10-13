@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Container from 'react-bootstrap/Container'
 import { NavLink, withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
 import Button from 'react-bootstrap/Button';
@@ -32,8 +32,9 @@ const Room =(props, {rooms}) => {
   return (
 
     <div>
+    <Container>
     <h3> {room ? room.room_name : null} </h3>
-    <p> Reservations go here!</p>
+
 
     <ReservationInput currentUser = {props.currentUser} room = {room}/><br/>
 
@@ -43,6 +44,7 @@ const Room =(props, {rooms}) => {
     {admin1 ? <Button variant="link" onClick={()=> handleDeleteRoom(room)}> Delete Room</Button> : ""}
     <br/>
     {admin1 ? <NavLink to= {`/rooms/${room.id}/edit`}> Edit Room Name </NavLink> : ""}
+    </Container>
     </div>
   )
 
