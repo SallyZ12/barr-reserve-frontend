@@ -35,7 +35,7 @@ const Room =(props, {rooms}) => {
     <h3> {room ? room.room_name : null} </h3>
     <p> Reservations go here!</p>
 
-    <ReservationInput currentUser = {props.currentUser} room = {props.rooms}/><br/>
+    <ReservationInput currentUser = {props.currentUser} room = {room}/><br/>
 
     {sortByDate(room.room_res).map((reservation =>   <p key={reservation.id}>
     {moment(reservation.date).format('MMM DD YYYY')} <br/>{reservation.hour}</p>))}
