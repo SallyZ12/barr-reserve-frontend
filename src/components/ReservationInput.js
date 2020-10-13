@@ -39,7 +39,7 @@ constructor() {
 
   handleSubmit = (event)=> {
     event.preventDefault()
-    let roomId = this.props.room.id
+    let roomId = this.props.room_id
     let userId = this.props.currentUser && this.props.currentUser.id
     let randomId = Math.floor(Math.random() * 1000000)
 
