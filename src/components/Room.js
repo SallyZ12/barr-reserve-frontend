@@ -4,6 +4,8 @@ import { NavLink, withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
 import Button from 'react-bootstrap/Button';
 import {deleteRoom} from '../actions/deleteRoom'
+import ReservationInput from '../components/ReservationInput'
+import moment from 'moment'
 
 const Room =(props, {rooms}) => {
 
@@ -18,11 +20,25 @@ const Room =(props, {rooms}) => {
   props.history.push("/")
   }
 
+  function sortByDate(data) {
+  return data.sort(function(a,b) {
+    let dateA = a.day
+    let dateB = b.day
+      let dateSort = dateB.localeCompare(dateA)
+          return dateSort
+    })
+}
+
   return (
 
     <div>
     <h3> {room ? room.room_name : null} </h3>
     <p> Reservations go here!</p>
+
+    <ReservationInput currentUser = {props.currentUser} room = {props.rooms}/><br/>
+
+    {sortByDate(room.room_res).map((reservation =>   <p key={reservation.id}>
+    {moment(reservation.date).format('MMM DD YYYY')} <br/>{reservation.hour}</p>))}
 
     {admin1 ? <Button variant="link" onClick={()=> handleDeleteRoom(room)}> Delete Room</Button> : ""}
     <br/>
