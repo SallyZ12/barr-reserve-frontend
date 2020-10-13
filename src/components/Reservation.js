@@ -40,3 +40,4 @@ return (
   </div>
 )
 }
+export default connect(null, {deleteReservation})(Reservation)
