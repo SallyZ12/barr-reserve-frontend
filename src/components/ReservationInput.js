@@ -39,11 +39,11 @@ constructor() {
 
   handleSubmit = (event)=> {
     event.preventDefault()
-
+    let roomId = this.props.room.id
     let userId = this.props.currentUser && this.props.currentUser.id
     let randomId = Math.floor(Math.random() * 1000000)
 
-    this.props.addReservation({...this.state, room_id: user_id: userId, confirmID: randomId }, userId, this.props.history)
+    this.props.addReservation({...this.state, room_id: roomId, user_id: userId, confirmID: randomId }, userId, this.props.history)
 
 
     this.setState({
@@ -100,3 +100,5 @@ constructor() {
     )
   }
 }
+
+export default withRouter(connect(null, {addReservation})(ReservationInput))
