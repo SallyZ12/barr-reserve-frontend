@@ -4,6 +4,7 @@ import Login from './components/Login'
 import './App.css';
 import RoomsContainer from './containers/RoomsContainer'
 import UsersContainer from './containers/UsersContainer'
+import ReservationsContainer from './containers/ReservationsContainer'
 import NavBar from './components/NavBar'
 import { fetchRooms } from './actions/fetchRooms'
 import { fetchUsers } from './actions/fetchUsers'
@@ -38,7 +39,7 @@ class App extends React.Component {
       <Route exact path="/login" component = {Login} />
 
       </Switch>
-
+      <ReservationsContainer/>
       <RoomsContainer/>
       <UsersContainer/>
       </div>
