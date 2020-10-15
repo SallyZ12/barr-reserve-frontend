@@ -21,9 +21,10 @@ const Room =(props, {rooms}) => {
   }
 
   function sortByDate(data) {
+    console.log(data)
   return data.sort(function(a,b) {
-    let dateA = a.day
-    let dateB = b.day
+    let dateA = a.date
+    let dateB = b.date
       let dateSort = dateB.localeCompare(dateA)
           return dateSort
     })
@@ -38,9 +39,10 @@ const Room =(props, {rooms}) => {
 
     <ReservationInput currentUser = {props.currentUser} room = {room}/><br/>
 
-    {sortByDate(room.room_res).map((reservation =>   <p key={reservation.id}>
+    {sortByDate(room.reservations).map((reservation =>   <p key={reservation.id}>
+      {/*(room.room_res).map((reservation =>   <p key={reservation.id}>*/}
     {moment(reservation.date).format('MMM DD YYYY')} <br/>{reservation.hour}</p>))}
-
+    {/*{moment(reservation.date).format('MMM DD YYYY')} <br/>{reservation.hour}</p>)*/}
     {admin1 ? <Button variant="link" onClick={()=> handleDeleteRoom(room)}> Delete Room</Button> : ""}
     <br/>
     {admin1 ? <NavLink to= {`/rooms/${room.id}/edit`}> Edit Room Name </NavLink> : ""}
