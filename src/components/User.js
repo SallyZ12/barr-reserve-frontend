@@ -21,8 +21,8 @@ let currentDate = moment(date).format('MMM DD YYYY')
 // sort by Date
 function sortByDate(data) {
   return data.sort(function(a,b) {
-    let dateA = a.day
-    let dateB = b.day
+    let dateA = a.date
+    let dateB = b.date
       let dateSort = dateB.localeCompare(dateA)
           return dateSort
         }
@@ -65,16 +65,16 @@ const handleDeleteUser = (user) => {
               user && sortByDate(user.reservations).map(reservation => ( <li key={reservation.id}>
                <Link to={`/reservations/${reservation.id}`} >
                ConfirmID: {reservation.confirmID} - </Link>
-               {moment(reservation.day).format('MMM DD YYYY')} -
+               {moment(reservation.date).format('MMM DD YYYY')} -
                {reservation.hour} --
-              {reservation.reservation_club}
+              {reservation.reservation_room}
               </li> )) :
 
              user && sortByDate(user.reservations).map(reservation => (<li key={reservation.id}>
               ConfirmID: {reservation.confirmID} --
               {moment(reservation.day).format('MMM DD YYYY')} -
               {reservation.hour} --
-              {reservation.reservation_club}
+              {reservation.reservation_room}
               </li> ))
             }
 
