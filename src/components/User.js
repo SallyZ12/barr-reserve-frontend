@@ -43,11 +43,7 @@ const handleDeleteUser = (user) => {
       {/*<Card.Img variant="top" src="holder.js/100px180" />*/}
       <Card.Body>
         <Card.Title> Today's Date: {currentDate} <br/><br/> Owner Information:</Card.Title>
-
-        {/*only player logged in can edit their own player information*/}
-        { user1 === currentUser1 ? <Link to={`/users/${user.id}/edit`}> Edit Owner Information </Link> : ""}
-        { admin1 ? <Button variant="link" onClick={()=> handleDeleteUser(user)}> Delete Owner</Button> : ""}
-
+        
         <Card.Text>
          <br/>
         Name: {user ? user.first_name : null} {user ? user.last_name : null} <br/>
@@ -56,8 +52,14 @@ const handleDeleteUser = (user) => {
         Apartment: {user ? user.apartment : null} <br/>
         Admin: {user ? user.admin : null} <br/>
         Reservation Count: {user ? user.reservations.length : null}<br/><br/>
-        Reservations: <br/>
 
+        {/*only owner logged in can edit their  information*/}
+        { user1 === currentUser1 ? <Link to={`/users/${user.id}/edit`}> Edit Owner Information </Link> : ""}
+        <br/>
+        { admin1 ? <Button variant="link" onClick={()=> handleDeleteUser(user)}> Delete Owner</Button> : ""}
+        <br/><br/>
+
+        Reservations: <br/>
             {/* ternary used so that admin can't access players specific reservation from player's main reservation screen*/}
 
            {user1 === currentUser1 ?
