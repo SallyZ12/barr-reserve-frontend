@@ -57,14 +57,14 @@ constructor() {
   render() {
 
     // The following modifies dropdown to exclude hours by day previously reserved
-    // let room = this.props.room
+    let room = this.props.room
 
     // reservation objects reserved by day of dropdown (the value = this.state.date)
-    // let day_room = room.room_res.filter(reservation => moment(reservation.date).format('MMM DD YYYY') === this.state.date)
+    let day_room = room.reservations.filter(reservation => moment(reservation.date).format('MMM DD YYYY') === this.state.date)
     // an array of strings for hours booked by court by day
-    // let hour_room = day_room.map(reservation => reservation.hour)
+    let hour_room = day_room.map(reservation => reservation.hour)
     // new time object that excludes hours already reserved by day
-    // let new_time = time.filter(time => !hour_room.includes(time.value))
+    let new_time = time.filter(time => !hour_room.includes(time.value))
 
 
     return (
@@ -91,7 +91,7 @@ constructor() {
           name = "hour"
           value = {this.state.hour}
           onChange = {this.handleChange}>
-          <Options options = {time}/>
+          <Options options = {new_time}/>
           </select>
 
         <br/><br/>
