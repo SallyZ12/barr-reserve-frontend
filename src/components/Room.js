@@ -21,7 +21,7 @@ const Room =(props, {rooms}) => {
   }
 
   function sortByDate(data) {
-    console.log(data)
+    
   return data.sort(function(a,b) {
     let dateA = a.date
     let dateB = b.date
