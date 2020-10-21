@@ -41,7 +41,7 @@ const Room =(props, {rooms}) => {
 
     {sortByDate(room.reservations).map((reservation =>   <p key={reservation.id}>
       {/*(room.room_res).map((reservation =>   <p key={reservation.id}>*/}
-    {moment(reservation.date).format('MMM Do YYYY')} -- {reservation.hour} -- {reservation.reservation_user_apt}</p>))}
+    {moment(reservation.date).format('MMM DD YYYY')} -- {reservation.hour} -- {reservation.reservation_user_apt}</p>))}
     {/*{moment(reservation.date).format('MMM DD YYYY')} <br/>{reservation.hour}</p>)*/}
     {admin1 ? <Button variant="link" onClick={()=> handleDeleteRoom(room)}> Delete Room</Button> : ""}
     <br/>
