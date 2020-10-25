@@ -18,7 +18,7 @@ function sortByName(data) {
 return (
 
   <div>
-    <h5> Registered - Count: {users.users.length} </h5>
+    <h6> {users.users.length} - Owners Registered  </h6>
      {users.users && sortByName(users.users).map(user =>
       <p key={user.id}>
       <Link to={`/users/${user.id}`}> {user.first_name} {user.last_name} -- {user.apartment}</Link>
