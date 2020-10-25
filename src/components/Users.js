@@ -21,7 +21,7 @@ return (
     <h5> Registered - Count: {users.users.length} </h5>
      {users.users && sortByName(users.users).map(user =>
       <p key={user.id}>
-      <Link to={`/users/${user.id}`}> {user.first_name} {user.last_name}</Link>
+      <Link to={`/users/${user.id}`}> {user.first_name} {user.last_name} -- {user.apartment}</Link>
     </p>)}
     </div>
   )
