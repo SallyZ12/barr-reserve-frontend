@@ -43,7 +43,7 @@ const handleDeleteUser = (user) => {
       {/*<Card.Img variant="top" src="holder.js/100px180" />*/}
       <Card.Body>
         <Card.Title> Today's Date: {currentDate} <br/><br/> Owner Information:</Card.Title>
-        
+
         <Card.Text>
          <br/>
         Name: {user ? user.first_name : null} {user ? user.last_name : null} <br/>
