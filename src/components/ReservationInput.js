@@ -14,6 +14,7 @@ constructor() {
   super()
 
   this.currentDate = new Date()
+  this.dayToday = moment(this.currentDate).add(0, 'days').format('MMM DD YYYY')
   this.dayOne = moment(this.currentDate).add(1, 'days').format('MMM DD YYYY')
   this.dayTwo = moment(this.currentDate).add(2, 'days').format('MMM DD YYYY')
   this.dayThree = moment(this.currentDate).add(3, 'days').format('MMM DD YYYY')
@@ -76,6 +77,7 @@ constructor() {
           value = {this.state.date}
           onChange = {this.handleChange}>
           <option value = "select"> Day </option>
+          <option value = {this.dayToday}> {this.dayToday} </option>
           <option value = {this.dayOne}> {this.dayOne} </option>
           <option value = {this.dayTwo}> {this.dayTwo} </option>
           <option value = {this.dayThree}> {this.dayThree} </option>
