@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 const NewRoomFormWrapper = ( {history, addRoom }) => {
 
   const handleSubmit = (roomData, roomId) => {
-    // console.log("clubData", clubData)
+    // console.log("roomData", roomData)
       addRoom({
        ...roomData,
        roomId
