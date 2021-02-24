@@ -33,7 +33,7 @@ export default function roomsReducer(state = initialState, action) {
           let rooms5 = state.rooms.map(room => {
               if (room.reservations.find(reservation => reservation.id === action.payload)) {
                     let new_rooms_array = room.room_res_date.filter(reservation => reservation.id !== action.payload)
-                      room.room_res_date = new_rooms_array}
+                      room.reservations = new_rooms_array}
 
                 return room
           })
