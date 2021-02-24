@@ -31,7 +31,7 @@ export default function roomsReducer(state = initialState, action) {
           case 'DELETE_RESERVATION_FROM_ROOM':
 
           let rooms5 = state.rooms.map(room => {
-              if (room.room_res_date.find(reservation => reservation.id === action.payload)) {
+              if (room.reservations.find(reservation => reservation.id === action.payload)) {
                     let new_rooms_array = room.room_res_date.filter(reservation => reservation.id !== action.payload)
                       room.room_res_date = new_rooms_array}
 
