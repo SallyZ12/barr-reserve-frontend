@@ -20,24 +20,24 @@ export default function roomsReducer(state = initialState, action) {
         case 'ADD_RESERVATION_TO_ROOM':
           let maxResId1 = (Math.max(...action.payload.reservations.map(reservation => reservation.id)))
 
-            let rooms4 = state.rooms.map(room => {
+            let rooms1 = state.rooms.map(room => {
               if (room.room_name === (action.payload.reservations.find(reservation => reservation.id === maxResId1)).reservation_room) {
                 room.reservations.push(action.payload.reservations.find(reservation => reservation.id === maxResId1))}
                 return room
             })
 
-          return {...state, rooms: rooms4}
+          return {...state, rooms: rooms1}
 
           case 'DELETE_RESERVATION_FROM_ROOM':
 
-          let rooms5 = state.rooms.map(room => {
+          let rooms2 = state.rooms.map(room => {
               if (room.reservations.find(reservation => reservation.id === action.payload)) {
                     let new_rooms_array = room.room_res_date.filter(reservation => reservation.id !== action.payload)
                       room.reservations = new_rooms_array}
 
                 return room
           })
-          return {...state, rooms: rooms5}
+          return {...state, rooms: rooms2}
 
 
 
