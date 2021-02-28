@@ -39,7 +39,7 @@ const Room =(props, {rooms}) => {
 
     <ReservationInput currentUser = {props.currentUser} room = {room}/><br/>
 
-           {sortByDate(room.room_res_date).map((reservation =>   <p key={reservation.id}>
+           {sortByDate(room.reservations).map((reservation =>   <p key={reservation.id}>
              {moment(reservation.date).format('MMM DD YYYY')} -- {reservation.hour} -- {reservation.reservation_user_apt} </p>))}
 
     {admin1 ? <Button variant="link" onClick={()=> handleDeleteRoom(room)}> Delete Room</Button> : ""}
