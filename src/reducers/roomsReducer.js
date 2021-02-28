@@ -22,7 +22,7 @@ export default function roomsReducer(state = initialState, action) {
 
             let rooms1 = state.rooms.map(room => {
               if (room.room_name === (action.payload.reservations.find(reservation => reservation.id === maxResId1)).reservation_room) {
-                room.reservations.push(action.payload.reservations.find(reservation => reservation.id === maxResId1))}
+                room.room_res_date.push(action.payload.reservations.find(reservation => reservation.id === maxResId1))}
                 return room
             })
 
@@ -31,7 +31,7 @@ export default function roomsReducer(state = initialState, action) {
           case 'DELETE_RESERVATION_FROM_ROOM':
 
           let rooms2 = state.rooms.map(room => {
-              if (room.reservations.find(reservation => reservation.id === action.payload)) {
+              if (room.room_res_date.find(reservation => reservation.id === action.payload)) {
                     let new_rooms_array = room.room_res_date.filter(reservation => reservation.id !== action.payload)
                       room.reservations = new_rooms_array}
 
