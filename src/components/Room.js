@@ -1,11 +1,12 @@
 import React from 'react'
-// import Container from 'react-bootstrap/Container'
+import Container from 'react-bootstrap/Container'
 import { NavLink, withRouter } from 'react-router-dom'
 import {connect} from 'react-redux'
 import Button from 'react-bootstrap/Button';
 import {deleteRoom} from '../actions/deleteRoom'
 import ReservationInput from '../components/ReservationInput'
 import moment from 'moment'
+import Table from 'react-bootstrap/Table'
 
 const Room =(props, {rooms}) => {
 
@@ -36,16 +37,31 @@ const Room =(props, {rooms}) => {
 
     <h3> {room ? room.room_name : null} </h3>
 
-
+<Container>
     <ReservationInput currentUser = {props.currentUser} room = {room}/><br/>
+<Table striped bordered size="sm">
+  <thead>
+  <tr>
+  <th> Date</th>
+  <th> Time </th>
+  <th> Apt </th>
+  </tr>
+  </thead>
+  <tbody>
+    {sortByDate(room.reservations).map((reservation =>   <React.Fragment key={reservation.id}>
+  <tr>
+  <td>{moment(reservation.date).format('MMM DD YYYY')}</td>
+  <td>{reservation.hour}</td>
+  <td>{reservation.reservation_user_apt}</td>
+  </tr>
+  </React.Fragment>
+  ))}
+  </tbody>
+  </Table>
+</Container>
 
-            {sortByDate(room.reservations).map((reservation =>   <p key={reservation.id}>
-             {moment(reservation.date).format('MMM DD YYYY')} -- {reservation.hour} -- {reservation.reservation_user_apt} </p>))}
-
-    {admin1 ? <Button variant="link" onClick={()=> handleDeleteRoom(room)}> Delete Room</Button> : ""}
-    <br/>
-    {admin1 ? <NavLink to= {`/rooms/${room.id}/edit`}> Edit Room Name </NavLink> : ""}
-
+{admin1 ? <Button variant="link" onClick={()=> handleDeleteRoom(room)}> Delete Room</Button> : ""}
+{admin1 ? <NavLink to= {`/rooms/${room.id}/edit`}> Edit Room Name </NavLink> : ""}
     </div>
   )
 
