@@ -21,6 +21,9 @@ const Room =(props, {rooms}) => {
   props.history.push("/")
   }
 
+  let todaysDate = new Date()
+  let futureRes = room.reservations.filter((futureDate) => (moment(futureDate.date).format('MMMM DD YYYY')) >= moment(todaysDate).format('MMMM DD YYYY'))
+
   function sortByDate(data) {
 
   return data.sort(function(a,b) {
@@ -34,7 +37,6 @@ const Room =(props, {rooms}) => {
   return (
 
     <div>
-
     <h3> {room ? room.room_name : null} </h3>
 
 <Container>
@@ -48,7 +50,7 @@ const Room =(props, {rooms}) => {
   </tr>
   </thead>
   <tbody>
-    {sortByDate(room.reservations).map((reservation =>   <React.Fragment key={reservation.id}>
+    {sortByDate(futureRes).map((reservation =>   <React.Fragment key={reservation.id}>
   <tr>
   <td>{moment(reservation.date).format('MMM DD YYYY')}</td>
   <td>{reservation.hour}</td>
