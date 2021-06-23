@@ -10,7 +10,7 @@ import Table from 'react-bootstrap/Table'
 
 const Room =(props, {rooms}) => {
 
-  // console.log("props", props)
+  console.log("props", props)
 
   let room = props.rooms.rooms && props.rooms.rooms.filter(room => room.id === parseInt(props.match.params.id))[0]
 
