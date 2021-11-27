@@ -74,7 +74,7 @@ const handleDeleteUser = (user) => {
 
              user && sortByDate(user.reservations).map(reservation => (<li key={reservation.id}>
               ConfirmID: {reservation.confirmID} --
-              {moment(reservation.day).format('MMM DD YYYY')} -
+              {moment(reservation.date).format('MMM DD YYYY')} -
               {reservation.hour} --
               {reservation.reservation_room}
               </li> ))
