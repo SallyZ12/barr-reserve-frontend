@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {Link, NavLink} from 'react-router-dom'
 import Logout from '../components/Logout'
-import DropdownButton from 'react-bootstrap/DropdownButton'
+// import DropdownButton from 'react-bootstrap/DropdownButton'
 import Button from 'react-bootstrap/Button'
 
 
@@ -20,12 +20,12 @@ let admin1 = currentUser && currentUser.admin === "Yes"
        {Object.keys(currentUser).length !== 0 ? <h4> Welcome, {currentUser.first_name} </h4> : "" }
        {Object.keys(currentUser).length !== 0 ? <p> <Link exact='true' to={`/users/${currentUser.id}`}>Reservations</Link></p> :""  }
 
-       {Object.keys(currentUser).length !== 0 && admin1 ? <DropdownButton id="dropdown-basic-button" title="Admin">
+       {Object.keys(currentUser).length !== 0 && admin1 ?
 
-
-       <Link exact='true' to={"/rooms"}>New Room </Link><br/>
+      <> ADMIN FUNCTIONS <br/> <Link exact='true' to={"/rooms"}>New Room </Link><br/>
        <Link exact='true' to={"/users"}>Owners </Link>
-       </DropdownButton> : ""}
+     </>
+      :""}
 
     </div>
   )
