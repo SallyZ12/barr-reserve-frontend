@@ -70,7 +70,7 @@ constructor() {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <label> Select </label><br/>
+        <label> Select To Book Reservation </label><br/>
 
         <select
           name = 'date'
