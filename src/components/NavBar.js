@@ -25,7 +25,7 @@ let admin1 = currentUser && currentUser.admin === "Yes"
       <> ADMIN FUNCTIONS <br/> <Link exact='true' to={"/rooms"}>New Room </Link><br/>
        <Link exact='true' to={"/users"}>Owners </Link>
      </>
-      :""}
+      :""}<br/><br/><br/>
 
     </div>
   )
