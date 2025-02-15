@@ -4,7 +4,7 @@ import {Link, NavLink} from 'react-router-dom'
 import Logout from '../components/Logout'
 // import DropdownButton from 'react-bootstrap/DropdownButton'
 import Button from 'react-bootstrap/Button'
-
+//test comment
 
 
 const NavBar =  ({ currentUser }) => {
