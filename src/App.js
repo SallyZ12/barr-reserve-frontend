@@ -32,7 +32,7 @@ class App extends React.Component {
 
       <br/>
       <NavBar/>
-      
+
       <Switch>
       <Route exact path = '/home' render = {() => <Home home = {this.props.rooms} />}/>
       <Route exact path = '/' render = {()=> <Redirect to='/home'/>}/>
@@ -50,7 +50,7 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   // console.log("MSTP-APP loggedIn:",!!state.currentUserReducer)
-  // console.log("MSTP-APP currentUser:", state.currentUserReducer)
+  console.log("MSTP-APP currentUser:", state.currentUserReducer)
   return ({
     loggedIn: !!state.currentUserReducer,
     currentUser: state.currentUserReducer,
