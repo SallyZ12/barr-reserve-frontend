@@ -15,7 +15,7 @@ export function fetchRooms() {
       .then(response => response.json())
       .then(rooms => dispatch(displayRooms(rooms))
     )
-   }
+  }
 }
 
 
