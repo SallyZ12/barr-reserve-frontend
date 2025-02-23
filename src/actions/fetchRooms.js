@@ -22,4 +22,4 @@ export function fetchRooms() {
 
 
 
-  // .then(rooms => console.log(rooms))
+  //.then(rooms => console.log(rooms))
