@@ -7,7 +7,7 @@ import { updateRoomForm } from '../actions/editRoom'
 const RoomInput = ({ roomFormData, updateRoomForm, history, editMode, handleSubmit}) => {
 
   const {roomName} = roomFormData
-   console.log("roomFormdData", roomFormData)
+   console.log("roomFormData", roomFormData)
 
   const handleClubInfoInputChange = event => {
     const { name, value } = event.target
