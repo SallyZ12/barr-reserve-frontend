@@ -1,4 +1,5 @@
 export const displayRooms = rooms => {
+  // console.log("action display:", rooms)
   return {
     type: "DISPLAY_ROOMS",
     rooms
