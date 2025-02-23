@@ -6,7 +6,7 @@ import Rooms from '../components/Rooms'
 
 
 const Home = (props) => {
-  console.log("home:", props)
+  console.log("home props:", props)
     return (
 
       <div className = "Home">
