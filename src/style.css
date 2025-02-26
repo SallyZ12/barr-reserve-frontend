@@ -17,12 +17,6 @@
   text-align: center;
 }
 
-.courts{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  list-style: none;
-}
 
 .Input{
   display: flex;
