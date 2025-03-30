@@ -5,7 +5,6 @@ import {connect} from 'react-redux'
 import Button from 'react-bootstrap/Button';
 import {deleteRoom} from '../actions/deleteRoom'
 import ReservationInput from '../components/ReservationInput'
-import moment from 'moment'
 import dayjs from 'dayjs'
 import Table from 'react-bootstrap/Table'
 
@@ -23,7 +22,7 @@ const Room =(props, {rooms}) => {
   }
 
   let todaysDate = new Date()
-  let futureRes = room.reservations.filter((futureDate) => (moment(futureDate.date).format('MMMM DD YYYY')) >= moment(todaysDate).format('MMMM DD YYYY'))
+  let futureRes = room.reservations.filter((futureDate) => (dayjs(futureDate.date).format('MMMM DD YYYY')) >= dayjs(todaysDate).format('MMMM DD YYYY'))
 
   function sortByDate(data) {
 
@@ -53,7 +52,7 @@ const Room =(props, {rooms}) => {
   <tbody>
     {sortByDate(futureRes).map((reservation =>   <React.Fragment key={reservation.id}>
   <tr>
-  <td>{moment(reservation.date).format('MMM DD YYYY')}</td>
+  <td>{dayjs(reservation.date).format('MMM DD YYYY')}</td>
   <td>{reservation.hour}</td>
   <td>{reservation.reservation_user_apt}</td>
   </tr>
