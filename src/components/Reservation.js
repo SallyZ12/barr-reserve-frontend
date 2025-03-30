@@ -1,6 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import moment from 'moment'
 import dayjs from 'dayjs'
 import {deleteReservation} from '../actions/deleteReservation'
 import Button from 'react-bootstrap/Button';
@@ -32,7 +31,7 @@ return (
   <br/>
   Room: {reservation ? reservation.reservation_room : null}<br/>
   ConfirmID: {reservation ? reservation.confirmID : null} <br/>
-  Date: {reservation ? moment(reservation.date).format('MMM DD YYYY') : null} <br/>
+  Date: {reservation ? dayjs(reservation.date).format('MMM DD YYYY') : null} <br/>
   Time: {reservation ?  reservation.hour : null} <br/>
 
  <br/><br/>
