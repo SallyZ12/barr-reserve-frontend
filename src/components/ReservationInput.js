@@ -1,6 +1,5 @@
 import React from 'react'
 import{connect} from 'react-redux'
-import moment from 'moment'
 import dayjs from 'dayjs'
 import {addReservation} from '../actions/addReservation'
 import { withRouter } from 'react-router-dom';
@@ -15,15 +14,15 @@ constructor() {
   super()
 
   this.currentDate = new Date()
-  this.dayToday = moment(this.currentDate).add(0, 'days').format('MMM DD YYYY')
-  this.dayOne = moment(this.currentDate).add(1, 'days').format('MMM DD YYYY')
-  this.dayTwo = moment(this.currentDate).add(2, 'days').format('MMM DD YYYY')
-  this.dayThree = moment(this.currentDate).add(3, 'days').format('MMM DD YYYY')
-  this.dayFour = moment(this.currentDate).add(4, 'days').format('MMM DD YYYY')
-  this.dayFive = moment(this.currentDate).add(5, 'days').format('MMM DD YYYY')
-  this.daySix = moment(this.currentDate).add(6, 'days').format('MMM DD YYYY')
-  this.daySeven = moment(this.currentDate).add(7, 'days').format('MMM DD YYYY')
-  this.dayEight = moment(this.currentDate).add(8, 'days').format('MMM DD YYYY')
+  this.dayToday = dayjs(this.currentDate).add(0, 'days').format('MMM DD YYYY')
+  this.dayOne = dayjs(this.currentDate).add(1, 'days').format('MMM DD YYYY')
+  this.dayTwo = dayjs(this.currentDate).add(2, 'days').format('MMM DD YYYY')
+  this.dayThree = dayjs(this.currentDate).add(3, 'days').format('MMM DD YYYY')
+  this.dayFour = dayjs(this.currentDate).add(4, 'days').format('MMM DD YYYY')
+  this.dayFive = dayjs(this.currentDate).add(5, 'days').format('MMM DD YYYY')
+  this.daySix = dayjs(this.currentDate).add(6, 'days').format('MMM DD YYYY')
+  this.daySeven = dayjs(this.currentDate).add(7, 'days').format('MMM DD YYYY')
+  this.dayEight = dayjs(this.currentDate).add(8, 'days').format('MMM DD YYYY')
 
 
   this.state = {
@@ -63,7 +62,7 @@ constructor() {
     let room = this.props.room
 
     // reservation objects reserved by day of dropdown (the value = this.state.date)
-    let day_room = room.reservations.filter(reservation => moment(reservation.date).format('MMM DD YYYY') === this.state.date)
+    let day_room = room.reservations.filter(reservation => dayjs(reservation.date).format('MMM DD YYYY') === this.state.date)
     // an array of strings for hours booked by court by day
     let hour_room = day_room.map(reservation => reservation.hour)
     // new time object that excludes hours already reserved by day
