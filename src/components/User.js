@@ -1,7 +1,6 @@
 import React from 'react'
 import {Link, withRouter} from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
-import moment from 'moment'
 import dayjs from 'dayjs'
 import Button from 'react-bootstrap/Button';
 import {deleteUser} from '../actions/deleteUser'
@@ -17,7 +16,7 @@ let user = props.users.users && props.users.users.filter(user => user.id === par
 
 // steps to accessing today's date
 let date = new Date()
-let currentDate = moment(date).format('MMM DD YYYY')
+let currentDate = dayjs(date).format('MMM DD YYYY')
 
 // sort by Date
 function sortByDate(data) {
@@ -68,14 +67,14 @@ const handleDeleteUser = (user) => {
               user && sortByDate(user.reservations).map(reservation => ( <li key={reservation.id}>
                <Link to={`/reservations/${reservation.id}`} >
                ConfirmID: {reservation.confirmID} - </Link>
-               {moment(reservation.date).format('MMM DD YYYY')} -
+               {dayjs(reservation.date).format('MMM DD YYYY')} -
                {reservation.hour} --
               {reservation.reservation_room}
               </li> )) :
 
              user && sortByDate(user.reservations).map(reservation => (<li key={reservation.id}>
               ConfirmID: {reservation.confirmID} --
-              {moment(reservation.date).format('MMM DD YYYY')} -
+              {dayjs(reservation.date).format('MMM DD YYYY')} -
               {reservation.hour} --
               {reservation.reservation_room}
               </li> ))
