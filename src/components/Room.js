@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import {deleteRoom} from '../actions/deleteRoom'
 import ReservationInput from '../components/ReservationInput'
 import moment from 'moment'
+import dayjs from 'dayjs'
 import Table from 'react-bootstrap/Table'
 
 const Room =(props, {rooms}) => {
