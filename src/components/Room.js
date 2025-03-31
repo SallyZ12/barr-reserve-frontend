@@ -22,7 +22,7 @@ const Room =(props, {rooms}) => {
   }
 
   let todaysDate = new Date()
-  let futureRes = room.reservations.filter((futureDate) => (dayjs(futureDate.date).format('MMMM DD YYYY')) >= dayjs(todaysDate).format('MMMM DD YYYY'))
+  let futureRes = room.reservations.filter((futureDate) => (dayjs(futureDate.date).format('MMMM DD YYYY')) <= dayjs(todaysDate).format('MMMM DD YYYY'))
 
   function sortByDate(data) {
 
