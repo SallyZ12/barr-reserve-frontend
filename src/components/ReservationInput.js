@@ -22,7 +22,7 @@ constructor() {
   this.dayFive = dayjs(this.currentDate).add(5, 'days').format('MMM DD YYYY')
   this.daySix = dayjs(this.currentDate).add(6, 'days').format('MMM DD YYYY')
   this.daySeven = dayjs(this.currentDate).add(7, 'days').format('MMM DD YYYY')
-  this.dayEight = dayjs(this.currentDate).add(8, 'days').format('MMM DD YYYY')
+  
 
 
   this.state = {
