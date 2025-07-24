@@ -22,7 +22,7 @@ constructor() {
   this.dayFive = dayjs(this.currentDate).add(5, 'days').format('MMM DD YYYY')
   this.daySix = dayjs(this.currentDate).add(6, 'days').format('MMM DD YYYY')
   this.daySeven = dayjs(this.currentDate).add(7, 'days').format('MMM DD YYYY')
-  
+
 
 
   this.state = {
@@ -86,7 +86,6 @@ constructor() {
           <option value = {this.dayFive}> {this.dayFive} </option>
           <option value = {this.daySix}> {this.daySix} </option>
           <option value = {this.daySeven}> {this.daySeven} </option>
-          <option value = {this.dayEight}> {this.dayEight} </option>
           </select>
 
           <br/>
