@@ -22,9 +22,11 @@ const Room =(props, {rooms}) => {
   }
 
   let todaysDate = new Date()
-  let futureRes = room.reservations.filter((futureDate) => (dayjs(futureDate.date).format('MMMM DD YYYY')) >= dayjs(todaysDate).format('MMMM DD YYYY'))
+  let futureRes = room.reservations.filter((futureDate) => (dayjs(futureDate.date).format('MM DD YYYY')) >= dayjs(todaysDate).format('MM DD YYYY'))
 
-  console.log("futureRes", futureRes)  
+  // changed format to 'MM DD YYYY' from 'MMMM DD YYYY' to display reservations in next month, MM formats by digit rather than alpha
+
+  console.log("futureRes", futureRes)
 
   function sortByDate(data) {
 
